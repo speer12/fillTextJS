@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fill Text Test</title>
+<style>
+  #wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .text{
+    width: 60%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+</style>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <div class="text">
+      This is some text.
+    </div>
+    <div class="text">
+      This is also some text. A lot more. 
+    </div>
+    <div class="text">
+      Not much.
+    </div>
+    <div class="text">
+      Also some here.
+    </div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="fillText.js" type="text/javascript"></script>
+<script>
+  $('.text').fillText(0.95);
+</script>
+</body>
+</html>
