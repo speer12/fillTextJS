@@ -1,7 +1,7 @@
 (function( $ ) {
   $.fn.fillText = function( adjustment ) {
     
-    $adjust = 1;
+    var $adjust = 1;
     
     if(adjustment){
       $adjust = adjustment;
@@ -20,20 +20,20 @@
       });
       
       function resizeText(){
-        $length = $el.text().length;
-        $width = $el.width();
-        $cw = $width/$length;
-        $ch = ($cw/0.5) * 0.9;
+        var $length = $el.text().length;
+        var $width = $el.width();
+        var $cw = $width/$length;
+        var $ch = ($cw/0.5) * 0.9;
        
         
-        $px = Math.round($ch/0.72) + 'px';
+        var $px = Math.round($ch/0.72) + 'px';
         $el.css('font-size', $px);
         
-        $height = $el.height();
-        $check = $height * 1.75;
+        var $height = $el.height();
+        var $check = $height * 1.75;
         
         while ($height < $check){
-          $font = parseInt($el.css('font-size').replace('px', ''));
+          var $font = parseInt($el.css('font-size').replace('px', ''));
           $font ++
           $el.css('font-size', $font);
           $height = $el.height();
@@ -41,11 +41,6 @@
         $font = ($font - 1) * $adjust;
         $el.css('font-size', $font);
       }
-      
-      
-      
-          
-      
       
     });
 
